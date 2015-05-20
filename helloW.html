@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>Hello React</title>
+  
+</head>
+
+<body>
+    <div id="content"></div>
+ 
+     <script src="https://fb.me/react-0.13.3.js"></script>
+     <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+     <script type="text/jsx">
+     /** @jsx React.DOM */
+
+         
+    	var CommentBox = React.createClass({
+
+        getInitialState: function() {
+          return{
+            isVisible: true,
+            titleMessage: 'Yo, MF'
+          }
+        },
+
+        render: function() {
+
+          var inlineStyles = {
+            display: this.state.isVisible ? 'block' : 'none'
+          };
+
+          return (
+            <div className="commentBox" style={inlineStyles}>
+            Hello, world! I am a CommentBox yoyo.
+            <h2>{this.state.titleMessage}</h2>
+            </div>
+          );
+        }
+      });
+
+      
+    </script>
+</body>
+
+</html>
